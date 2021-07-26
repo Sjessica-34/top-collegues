@@ -2,7 +2,8 @@
 https://sjessica-34.github.io/top-collegues/
 
 # Travis
-[![Build Status](https://travis-ci.com/Sjessica-34/top-collegues.svg?branch=master)](https://travis-ci.com/Sjessica-34/top-collegues)
+[![Build Status](https://travis-ci.com/Sjessica-34/top-collegues.svg?branch=master)]
+https://travis-ci.com/Sjessica-34/top-collegues
 
 # TopCollegues
 
