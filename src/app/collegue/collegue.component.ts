@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Avis, Collegue} from "../models";
-import { EventEmitter } from '@angular/core';
+
 
 @Component({
   selector: 'app-collegue',
@@ -23,3 +23,4 @@ export class CollegueComponent implements OnInit {
     avis == Avis.AIMER ? this.collegue.score++ : this.collegue.score--
   }
 }
+

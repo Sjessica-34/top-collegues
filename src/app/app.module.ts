@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AvisComponent } from './avis/avis.component';
 import { CollegueComponent } from './collegue/collegue.component';
+import { ScorePipe } from './pipes/score.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     AvisComponent,
-    CollegueComponent
+    CollegueComponent,
+    ScorePipe
   ],
   imports: [
     BrowserModule,
@@ -20,3 +22,4 @@ import { CollegueComponent } from './collegue/collegue.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
