@@ -10,9 +10,11 @@ import {Avis} from "../models";
 
 export class AvisComponent implements OnInit {
 
+  @Output() avis = new EventEmitter<Avis>();
 
-  @Input()
-  avis?:Avis
+  @Input() desactiveJaime = false;
+
+  @Input() desactiveJeDeteste = false;
 
   constructor() {
 
@@ -21,11 +23,11 @@ export class AvisComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  Avis(avis:string):void {
-    if (avis == "aimerColl") {
-      this.avis = Avis.AIMER
-    } else if (avis == "detesterColl") {
-      this.avis = Avis.DETESTER
-    }
+  aimerColl() {
+    this.avis.emit(Avis.AIMER);
+  }
+
+  detesterColl() {
+    this.avis.emit(Avis.DETESTER);
   }
 }
