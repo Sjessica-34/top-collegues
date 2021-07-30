@@ -1,15 +1,18 @@
-import {Component, Input, OnInit} from '@angular/core';
+import { EventEmitter } from '@angular/core';
+import {Component, Input, OnInit, Output} from '@angular/core';
 import {Avis} from "../models";
 
 @Component({
   selector: 'app-avis',
   templateUrl: './avis.component.html',
-  styleUrls: ['./avis.component.css']
+
 })
+
 export class AvisComponent implements OnInit {
 
+
   @Input()
-  avis?: Avis
+  avis?:Avis
 
   constructor() {
 
@@ -18,10 +21,10 @@ export class AvisComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  putAvis(avis: string): void {
-    if (avis == "aimer") {
+  Avis(avis:string):void {
+    if (avis == "aimerColl") {
       this.avis = Avis.AIMER
-    } else if (avis == "detester") {
+    } else if (avis == "detesterColl") {
       this.avis = Avis.DETESTER
     }
   }
