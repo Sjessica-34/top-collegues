@@ -7,7 +7,7 @@ import {Avis} from "./models";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'top-collegues';
+  //title = 'top-collegues';
   avisRecupere = Avis.AIMER;
   ;
 }

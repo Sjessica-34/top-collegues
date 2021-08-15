@@ -8,7 +8,7 @@ import {Avis} from "../models";
 
 })
 
-export class AvisComponent implements OnInit {
+export class AvisComponent {
 
   @Output() avis = new EventEmitter<Avis>();
 
@@ -20,14 +20,11 @@ export class AvisComponent implements OnInit {
 
   }
 
-  ngOnInit(): void {
-  }
-
-  aimerColl() {
+    aimer() {
     this.avis.emit(Avis.AIMER);
   }
 
-  detesterColl() {
+  detester() {
     this.avis.emit(Avis.DETESTER);
   }
 }
