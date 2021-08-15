@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Avis, Collegue, Vote} from "../models";
+import {Avis, Collegue, Vote, Votes} from "../models";
 
 @Injectable({
   providedIn: 'root'
@@ -24,5 +24,9 @@ export class DataService {
       body: JSON.stringify(vote),
       headers: {'Content-Type': 'application/json'}
     })
+  }
+  listerVotes(): Promise<Votes[]> {
+    return fetch('https://formation-angular-collegues.herokuapp.com/votes')
+      .then(response => response.json());
   }
 }

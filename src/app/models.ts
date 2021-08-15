@@ -12,7 +12,7 @@ export enum Avis {
 }
 
 export interface Vote {
-  pseudo: string;
+  collegue: string;
   avis: Avis;
 
 }
