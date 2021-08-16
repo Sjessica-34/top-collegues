@@ -22,9 +22,7 @@ export class AccueilComponent implements OnInit {
       .catch(() => this.msgErr = true)
   }
 
-  showForm() {
-    this.show = true;
-  }
 }
+
 
 

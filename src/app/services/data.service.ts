@@ -1,5 +1,6 @@
-import { environment } from './../../environments/environment.prod';
-import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { environment } from './../../environments/environment';
+import { Observable, Subject } from 'rxjs';
 import {Injectable} from '@angular/core';
 import {Avis, Collegue, Vote, Votes} from "../models";
 
@@ -8,8 +9,19 @@ import {Avis, Collegue, Vote, Votes} from "../models";
 })
 export class DataService {
 
-  constructor() {
+  private subjectCurrentVotes = new Subject<Votes>();
+
+  constructor(private http: HttpClient) {
   }
+
+  get currentVotes(): Observable<Votes> {
+    return this.subjectCurrentVotes.asObservable();
+  }
+
+  publierVotesCourant(vote: Votes) {
+    this.subjectCurrentVotes.next(vote);
+  }
+
 
   listerCollegues(): Promise<Collegue[]> {
     return fetch('https://formation-angular-collegues.herokuapp.com/collegues')
@@ -34,5 +46,9 @@ export class DataService {
 
   createCollegue(collegue:Collegue): Observable<Collegue> {
     return this.http.post<Collegue>(environment.urlResourceCollegue, collegue)
+  }
+
+  getCollegueByPseudo(pseudo: string | null): Observable<Collegue> {
+    return this.http.get<Collegue>(environment.urlResourceCollegue + `/${pseudo}`)
   }
 }

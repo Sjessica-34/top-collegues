@@ -9,6 +9,7 @@ import {DataService} from "../services/data.service";
 export class CollegueComponent implements OnInit {
 
   @Input() collegue?: Collegue;
+  err = false;
 
   constructor(private service:DataService) { }
 

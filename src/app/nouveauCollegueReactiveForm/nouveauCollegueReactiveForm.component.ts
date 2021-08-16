@@ -6,7 +6,7 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {Router} from '@angular/router';
 
 @Component({
-  selector: 'app-nouveau-collegue-reactive-form',
+  selector: 'app-nouveauCollegueReactiveForm',
   templateUrl: './nouveauCollegueReactiveForm.component.html',
   styleUrls: ['./nouveauCollegueReactiveForm.component.css']
 })

@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { Collegue } from '../models';
 import { DataService } from '../services/data.service';
@@ -16,7 +17,10 @@ export class NouveauCollegueTemplateFormComponent implements OnInit {
     score: 100
   };
 
-  constructor(private service:DataService) { }
+  constructor(
+    private service: DataService,
+    private Router: Router
+  ) { }
 
   ngOnInit(): void {
   }
@@ -29,7 +33,9 @@ export class NouveauCollegueTemplateFormComponent implements OnInit {
       prenom: this.collegue.prenom,
       score: this.collegue.score,
       photo: this.collegue.photo
-    }).subscribe(
+    }).subscribe(collegue => {
+      this.Router.navigate([''])
+    }
 
     )
 
