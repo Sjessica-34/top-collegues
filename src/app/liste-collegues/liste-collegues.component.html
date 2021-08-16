@@ -1,6 +1,6 @@
 <div class="row">
   <p *ngIf="msgErr; else listCollegue">
-    Oops, je n'ai pas pu récupéré de collegues.
+    Je n'ai pas pu récupérer de collegues.
   </p>
   <ng-template #listCollegue>
     <div *ngFor="let collegue of collegues" class="col col-sm-6 col-md-4 border">

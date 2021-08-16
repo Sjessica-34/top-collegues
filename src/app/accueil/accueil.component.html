@@ -1,3 +1,6 @@
-<button (click)="refresh()" class="btn btn-success m-3">Actualiser la liste</button>
-<app-liste-collegues [collegues]="collegues"></app-liste-collegues>
-<app-historique-votes></app-historique-votes>
+<button (click)="refresh()" class="btn btn-success m-3">Rafraichir la liste</button>
+
+<div class="row">
+  <app-liste-collegues [collegues]="collegues" class="col-8"></app-liste-collegues>
+  <app-historique-votes class="col-4"></app-historique-votes>
+</div>

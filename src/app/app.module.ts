@@ -9,6 +9,7 @@ import { ScorePipe } from './pipes/score.pipe';
 import { ListeColleguesComponent } from './liste-collegues/liste-collegues.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { HistoriqueVotesComponent } from './historique-votes/historique-votes.component';
+//import { SColorDirective } from './directives/s-color.directive';
 
 @NgModule({
   declarations: [
@@ -18,8 +19,11 @@ import { HistoriqueVotesComponent } from './historique-votes/historique-votes.co
     ScorePipe,
     ListeColleguesComponent,
     AccueilComponent,
-    HistoriqueVotesComponent
+    //ScColorDirective,
+    HistoriqueVotesComponent,
+
   ],
+
   imports: [
     BrowserModule,
     NgbModule,

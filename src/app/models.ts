@@ -3,7 +3,8 @@ export interface Collegue {
   score: number;
   nom: string;
   prenom: string;
-  photoUrl: string;
+  photo: string;
+
 }
 
 export enum Avis {
@@ -12,7 +13,13 @@ export enum Avis {
 }
 
 export interface Vote {
-  collegue: string;
+  pseudo: string;
   avis: Avis;
 
+}
+
+export interface Votes {
+  collegue: Collegue;
+  avis: Avis;
+  score: number;
 }

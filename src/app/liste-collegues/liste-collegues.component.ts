@@ -1,3 +1,4 @@
+import { DataService } from './../services/data.service';
 import { Component, Input, OnInit } from '@angular/core';
 import { Collegue } from '../models';
 
