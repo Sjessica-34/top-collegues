@@ -1,3 +1,5 @@
+import { environment } from './../../environments/environment.prod';
+import { Observable } from 'rxjs';
 import {Injectable} from '@angular/core';
 import {Avis, Collegue, Vote, Votes} from "../models";
 
@@ -28,5 +30,9 @@ export class DataService {
   listerVotes(): Promise<Votes[]> {
     return fetch('https://formation-angular-collegues.herokuapp.com/votes')
       .then(response => response.json());
+  }
+
+  createCollegue(collegue:Collegue): Observable<Collegue> {
+    return this.http.post<Collegue>(environment.urlResourceCollegue, collegue)
   }
 }

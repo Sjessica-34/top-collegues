@@ -9,6 +9,7 @@ import { DataService } from '../services/data.service';
 export class AccueilComponent implements OnInit {
   collegues: Collegue[] = [];
   msgErr = false;
+  show = false
 
   constructor(private service: DataService) { }
 
@@ -19,6 +20,10 @@ export class AccueilComponent implements OnInit {
     this.service.listerCollegues()
       .then(collegues => this.collegues = collegues)
       .catch(() => this.msgErr = true)
+  }
+
+  showForm() {
+    this.show = true;
   }
 }
 

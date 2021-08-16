@@ -9,7 +9,11 @@ import { ScorePipe } from './pipes/score.pipe';
 import { ListeColleguesComponent } from './liste-collegues/liste-collegues.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { HistoriqueVotesComponent } from './historique-votes/historique-votes.component';
-//import { SColorDirective } from './directives/s-color.directive';
+import { ScColorDirective } from './directives/sc-color.directive';
+import { NouveauCollegueTemplateFormComponent } from './nouveauCollegueTemplateForm/nouveauCollegueTemplateForm.component';
+import {FormsModule} from "@angular/forms";
+import { NomPrenomValidatorDirective } from './validator/nom-prenom-validator.directive';
+import { PseudoValidatorDirective } from './validator/pseudo-validator.directive';
 
 @NgModule({
   declarations: [
@@ -19,16 +23,19 @@ import { HistoriqueVotesComponent } from './historique-votes/historique-votes.co
     ScorePipe,
     ListeColleguesComponent,
     AccueilComponent,
-    //ScColorDirective,
+    ScColorDirective,
     HistoriqueVotesComponent,
-
+    NouveauCollegueTemplateFormComponent,
+    NomPrenomValidatorDirective,
+    PseudoValidatorDirective
   ],
 
   imports: [
     BrowserModule,
     NgbModule,
-
+    FormsModule
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })
